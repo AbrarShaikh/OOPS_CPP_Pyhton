@@ -19,3 +19,8 @@
 - Class is a template, prototype, model or blueprint for creating the objects.
 - It describes the attributes and behaviour performed by its objects
 - It consists of data members and member functions, which can be accessed and used by creating an instance of that class.
+
+## Advantage of OOPs over POPs
+- OOPs makes development and maintenance easier where as in Procedure-oriented programming language it is not easy to manage if code grows as project size grows.
+- OOPs provide data hiding whereas in Procedure-oriented programming language a global data can be accessed from anywhere.
+- OOPs provide ability to simulate real-world event much more effectively. We can provide the solution of real word problem if we are using the Object-Oriented Programming language.
