@@ -14,8 +14,8 @@
 - Attributes can be represented by variables and attributes by methods.
 - Objects are the __instances__ of a class that are created to use the attributes and methods of a class.
 
-# Classes
-- __Collection__ of objects is called Class. It is a logical entity.
+# Class
+- __Collection__ of similar objects is called Class. It is a logical entity.
 - Class is a template, prototype, model or blueprint for creating the objects.
 - It describes the attributes and behaviour performed by its objects
 - It consists of data members and member functions, which can be accessed and used by creating an instance of that class.
