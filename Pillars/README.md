@@ -9,4 +9,6 @@
 - Binding (or wrapping) code and data together into a single unit (Class) is known as encapsulation.
 - It is the mechanism that binds together code and the data it manipulates.
 - Data encapsulation is most __strick__ feature of class.
-- Data is not accessible to the outside world.
+- Encapsulation also leads to data abstraction or data hiding.
+- Data (access specifier = private) is not accessible to the outside world.
+- In encapsulation, the data in a class is hidden from other classes, which is similar to what data-hiding
