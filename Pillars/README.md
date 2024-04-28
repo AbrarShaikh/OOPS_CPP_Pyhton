@@ -26,5 +26,20 @@
 - Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
 - differentiate between entities with the same name efficiently.
 - Different situations may cause an operation to behave differently. The type of data utilized in the operation determines the behaviour.
--  it is basically applied to functions or methods.
+- it is basically applied to functions or methods.
 - polymorphism is implemented with the help of Compile time polymorphism (function overloading, operator overloading), and Run time polymorphism (function overriding) and virtual functions.
+
+# Dynamic Binding
+- code to be executed in response to the function call is decided at runtime.
+- code associated with a given procedure call is not known until the time of the call at run time.
+- function call associated with Polymorphic reference depends on the dynamic type of that reference.
+- at runtime, the code matching with the object under the current reference will be called.
+- C++ has virtual functions to support this.
+- Dynamic Method Binding One of the main advantages of inheritance and associated with Polymorphism.
+
+# Message Passing
+- A message for an object is a request for the execution of a procedure and therefore will invoke a function in the receiving object that generates the desired results.
+- Message passing involves specifying the name of the object, the name of the function, and the information to be sent.
+```
+object.classMethod(info)
+```
