@@ -19,4 +19,11 @@
 - Inheritance allows us to create a new class (derived class) from an existing class (base class).
 - one object acquires all the properties and behaviours of the parent object.
 - It supports conecpt of __hieratchical classicfication__.
-- Eliminates __redundencies__, increases __resuibilty__ by extending use of existing class
+- Eliminates __redundencies__, increases __resuibilty__ by extending use of existing class.
+
+# Polymorphism
+- Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+- differentiate between entities with the same name efficiently.
+- Different situations may cause an operation to behave differently. The type of data utilized in the operation determines the behaviour.
+- polymorphism is implemented with the help of Compile time polymorphism (function overloading, operator overloading), and Run time polymorphism (virtual functions) and function overriding.
+-  
