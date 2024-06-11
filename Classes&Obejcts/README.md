@@ -65,11 +65,41 @@ Or
 : length(len)
 , height(hgt)
 ```
+## Constructor Overloading
+```C
+class Room {
+   private:
+    double length;
+    double breadth;
+
+   public:
+    // 1. Constructor with no arguments
+    Room() {
+        length = 6.9;
+        breadth = 4.2;
+    }
+
+    // 2. Constructor with two arguments
+    Room(double l, double b) {
+        length = l;
+        breadth = b;
+    }
+    // 3. Constructor with one argument
+    Room(double len) {
+        length = len;
+        breadth = 7.2;
+    }
+```
 
 ## Copy Constructor
 - Copy constructor is an overloaded constructor
 - used to declare and initialize an object from another object of same class.
 - used to copy data from one object to another.
+#
+Copy Constructor is called when:
+1. initialize the object with another existing object of the same class type.
+2. the object of the same class type is passed by value as an argument.
+3. the function returns the object of the same class type by value.
 ###  Implicit Copy Constructor
 ``` C
 class Sample {
@@ -121,3 +151,14 @@ class Wall {
   // copy contents of wall1 to wall2
   Wall wall2 = wall1;
 ```
+Two types of copies are produced by the constructor:
+### Shallow Copy
+- The default copy constructor can only produce the shallow copy.
+- The default constructor creates the exact copy or shallow copy of the existing object
+- A Shallow copy is defined as the process of creating the copy of an object by copying data of all the member variables as it is.
+- in Above Sample class example, obj1 and obj2 are Shallow Copy.
+
+### Deep Copy
+- user-defined (Explicit) constructor that creates the Deep copy.
+- Deep copy dynamically allocates the memory for the copy and then copies the actual value
+- both the source and copy have distinct memory locations.
