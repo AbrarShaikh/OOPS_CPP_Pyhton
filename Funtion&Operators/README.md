@@ -163,3 +163,6 @@ int main(void){
     bp->show();
     return 0;}
 ```
+## Virtual Destructor
+- When a derived class involves dynamic memory allocation, we have to deallocate the memory in its destructor.
+- instance while deleting instances of the derived class using a base class pointer object.
