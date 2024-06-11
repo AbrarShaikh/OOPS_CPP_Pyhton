@@ -166,3 +166,27 @@ int main(void){
 ## Virtual Destructor
 - When a derived class involves dynamic memory allocation, we have to deallocate the memory in its destructor.
 - instance while deleting instances of the derived class using a base class pointer object.
+- Deleting a derived class object using a pointer of base class type that has a non-virtual destructor results in undefined behavior.
+```C
+class base {
+  public:
+    base()     
+    { cout << "Constructing base\n"; }
+    virtual ~base()
+    { cout << "Destructing base\n"; }     
+};
+ 
+class derived : public base {
+  public:
+    derived()     
+    { cout << "Constructing derived\n"; }
+    ~derived()
+    { cout << "Destructing derived\n"; }
+}; 
+int main(){
+  derived *d = new derived();  
+  base *b = d;
+  delete b;
+  getchar();
+  return 0;}
+```
