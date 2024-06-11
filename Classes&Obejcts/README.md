@@ -55,3 +55,13 @@ class Wall {
     }
 };
 ```
+### Member Initializer List
+```
+: length{len} 
+,  height{hgt}
+```
+Or
+```
+: length(len)
+,  height(hgt)
+```
