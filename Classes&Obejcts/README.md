@@ -180,3 +180,49 @@ class Wall {
     }
 };
 ```
+### Private Destructors
+- For dynamically created objects, it may happen that you pass a pointer to the object to a function and the function deletes the object.
+- If the object is referred after the function call, the reference will become dangling.
+```C
+class Test {
+private:
+    ~Test() {}
+};
+int main() { Test* t = new Test; }
+```
+- it is the programmer’s responsibility to delete it. So compiler doesn’t bother.
+- but ```delet t``` program fails in the compilation When delete, destructor is called.\
+Can be resolved using
+1. function as a friend of the class
+```C
+class Test {
+private:
+    ~Test() {}
+ 
+public:
+    friend void destructTest(Test*);
+};
+ 
+// Only this function can destruct objects of Test
+void destructTest(Test* ptr) { delete ptr; }
+```
+2.  class instance method
+```C
+class parent {
+    // private destructor
+    ~parent() { cout << "destructor called" << endl; }
+ 
+public:
+    parent() { cout << "constructor called" << endl; }
+    void destruct() { delete this; }
+};
+int main()
+{
+    parent* p;
+    p = new parent;
+    // destructor called
+    p->destruct();
+ 
+    return 0;
+}
+```
