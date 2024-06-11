@@ -6,8 +6,30 @@
 # Function OverRiding
 - If derived class defines same function as defined in its base class, it is known as function overriding.
 - member function in the derived class shadows the member function in the base class.
-- It is used to achieve runtime polymorphism.
-- 
+- redefinition of base class function in its derived class with the same signature
+- It is used to achieve Compile time as well as Runtime polymorphism.
+```C
+class Base {
+   public:
+    void print() {
+        cout << "Base Function" << endl;
+    }
+};
+
+class Derived : public Base {
+   public:
+    void print() {
+        cout << "Derived Function" << endl;
+    }
+};
+```
+```
+    Derived derived1, derived2;
+    derived1.print();
+
+    // access print() function of the Base class
+    derived2.Base::print();
+```
 
 # Friend Function
 - can access the private and protected data of a class.
