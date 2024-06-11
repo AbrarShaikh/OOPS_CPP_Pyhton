@@ -162,3 +162,21 @@ Two types of copies are produced by the constructor:
 - user-defined (Explicit) constructor that creates the Deep copy.
 - Deep copy dynamically allocates the memory for the copy and then copies the actual value
 - both the source and copy have distinct memory locations.
+
+# Destructors
+- A destructor is a special member function that is called automatically when an object goes out of scope or when we delete the object with the delete expression.
+- destructor has the same name as that of the class, and it does not have a return type.
+- ~ precedes the identifier to indicate destructor.
+``` C
+class Wall {
+  private:
+    double* length;
+    double* height;
+
+  public:
+    ~Wall() {
+        delete length;
+        delete height;
+    }
+};
+```
