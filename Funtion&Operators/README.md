@@ -107,4 +107,28 @@ class Derived : public Base {
 - A virtual function must be defined in the base class, even though it is not used.
 - The prototypes of a virtual function of the base class and all the derived classes must be identical.
 - We cannot have a virtual constructor, but we can have a virtual destructor
-- 
+Use : base class pointer can only access the base class members but not the members of the derived class.
+Although C++ permits the base pointer to point to any object derived from the base class, it cannot directly access the members of the derived class.
+```C
+class Base {
+   public:
+    virtual void print() {
+        cout << "Base Function" << endl;
+    }
+};
+
+class Derived : public Base {
+   public:
+    void print() override {
+        cout << "Derived Function" << endl;
+    }
+};
+
+int main() {
+    Derived derived1;
+    // pointer of Base type that points to derived1
+    Base* base1 = &derived1;
+    // calls member function of Derived class
+    base1->print();
+    return 0;}
+```
