@@ -154,8 +154,10 @@ class Wall {
 Two types of copies are produced by the constructor:
 ### Shallow Copy
 - The default copy constructor can only produce the shallow copy.
-- The default constructor creates the exact copy or shallow copy of the existing object
-- A Shallow copy is defined as the process of creating the copy of an object by copying data of all the member variables as it is.
+- The default constructor creates the exact copy or shallow copy of the existing object.
+- A Shallow copy is defined as the process of creating the copy of an object by copying data of all the member variables as it is, except dynamically allocated memory from heap section.
+- If some variables are dynamically allocated memory from heap section, then the copied object variable will also reference the same memory location.
+- This will create ambiguity and run-time errors, dangling pointer.
 - in Above Sample class example, obj1 and obj2 are Shallow Copy.
 
 ### Deep Copy
@@ -226,3 +228,17 @@ int main()
     return 0;
 }
 ```
+# Access Modifiers
+### Public: 
+- All the class members declared under the public specifier will be available to everyone
+### Private: 
+- The class members declared as private can be accessed only by the member functions inside the class.
+- friend classes and friend functions can access private members.
+### Protected
+- can be accessed within the class and from the derived class.
+
+| Specifiers	| Same Class |	Derived Class	| Outside Class |
+| :--- | :---: | :---: | :---: |
+| public	| Yes	| Yes	| Yes |
+| private	| Yes	| No	| No |
+| protected	| Yes	| Yes |	No |
