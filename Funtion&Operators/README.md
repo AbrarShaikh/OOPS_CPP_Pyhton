@@ -1,42 +1,3 @@
-# Function Overloading
-- two functions can have the same name if the number and/or type of arguments passed is different.
-- These functions having the same name but different arguments are known as overloaded functions.
-- Function cant be overloaded based on only different return Type. 
-
-# Function OverRiding
-- If derived class defines same function as defined in its base class, it is known as function overriding.
-- member function in the derived class shadows the member function in the base class.
-- redefinition of base class function in its derived class with the same signature
-- It is used to achieve Compile time as well as Runtime polymorphism.
-### Compile time overriding
-- call to the overridden function is resolved during compile time.
-- It is also called early binding (static binding) where the function call is binded to its definition during compilation.
-```C
-class Base {
-   public:
-    void print() {
-        cout << "Base Function" << endl;
-    }
-};
-
-class Derived : public Base {
-   public:
-    void print() {
-        cout << "Derived Function" << endl;
-    }
-};
-```
-```
-    Derived derived1, derived2;
-    derived1.print();
-
-    // access print() function of the Base class
-    derived2.Base::print();
-```
-###  Runtime overriding using Virtual Function
-- function call will be binded to its definition during runtime (also known as late binding or dynamic binding).
-- This can be done with the help of virtual functions.
-
 # Friend Function
 - can access the private and protected data of a class.
 - function definition does not use either the keyword friend or scope resolution operator.
@@ -98,3 +59,52 @@ class ClassB {
     }
 };
 ```
+
+# Function Overloading
+- two functions can have the same name if the number and/or type of arguments passed is different.
+- These functions having the same name but different arguments are known as overloaded functions.
+- Function cant be overloaded based on only different return Type. 
+
+# Function OverRiding
+- If derived class defines same function as defined in its base class, it is known as function overriding.
+- member function in the derived class shadows the member function in the base class.
+- redefinition of base class function in its derived class with the same signature
+- It is used to achieve Compile time as well as Runtime polymorphism.
+### Compile time overriding
+- call to the overridden function is resolved during compile time.
+- It is also called early binding (static binding) where the function call is binded to its definition during compilation.
+```C
+class Base {
+   public:
+    void print() {
+        cout << "Base Function" << endl;
+    }
+};
+
+class Derived : public Base {
+   public:
+    void print() {
+        cout << "Derived Function" << endl;
+    }
+};
+```
+```
+    Derived derived1, derived2;
+    derived1.print();
+
+    // access print() function of the Base class
+    derived2.Base::print();
+```
+###  Runtime overriding using Virtual Function
+- function call will be binded to its definition during runtime (also known as late binding or dynamic binding).
+- This can be done with the help of virtual functions.
+
+# Virtual Function 
+- virtual function is a member function in the base class that you redefine in a derived class.
+- It is used to tell the compiler to perform dynamic linkage or late binding on the function.
+- In late binding function call is resolved during runtime. Therefore type of object are determined at runtime, and then binds the function call.
+- They are accessed through ```object pointers```.
+- A virtual function must be defined in the base class, even though it is not used.
+- The prototypes of a virtual function of the base class and all the derived classes must be identical.
+- We cannot have a virtual constructor, but we can have a virtual destructor
+- 
