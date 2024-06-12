@@ -4,7 +4,7 @@
 - It can be declared either in the private or the public part.
 - It cannot be called using the object as it is not in the scope of that class.
 - It can be invoked like a normal function without using the object.
-```C
+```Cpp
 class Distance {
     private:
         int meter;
@@ -28,7 +28,7 @@ int addFive(Distance d) {
 # Friend Class
 - A friend class can access both private and protected members of the class in which it has been declared as friend.
 - all the member functions of the friend class become friend functions.
-```C
+```Cpp
 class ClassB;
 
 class ClassA {
@@ -74,7 +74,7 @@ class ClassB {
 ### Compile time overriding
 - call to the overridden function is resolved during compile time.
 - It is also called ```Early binding``` (```static binding```) where the function call is binded to its definition during compilation.
-```C
+```Cpp
 class Base {
    public:
     void print() {
@@ -112,7 +112,7 @@ class Derived : public Base {
 - ```Override``` specifier specifies the member functions of the derived classes that override the member function of the base class.
 Use : base class pointer can only access the base class members but not the members of the derived class.
 Although C++ permits the base pointer to point to any object derived from the base class, it cannot directly access the members of the derived class.
-```C
+```Cpp
 class Base {
    public:
     virtual void print() {
@@ -140,7 +140,7 @@ int main() {
 - Pure Virtual function is one with ```expression = 0```
 - We cannot create (instantiate) objects of an abstract class.
 - However, we can derive classes from them, and use their data members and member functions (except pure virtual functions).
-```C
+```Cpp
 // Abstract class
 class Shape {
    protected:
@@ -176,7 +176,7 @@ class Circle : public Shape {
 - class containing the pure virtual function cannot be used to declare the objects of its own, such classes are known as ```abstract base classes```.
 - A pure virtual function or ```abstract function``` is a virtual function for which we can have an implementation, But we must override that function in the derived class.
 - The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
-```C
+```Cpp
 class Base {
 public:
     // pure virtual function
@@ -203,7 +203,7 @@ int main(void){
 - When a derived class involves dynamic memory allocation, we have to deallocate the memory in its destructor.
 - instance while deleting instances of the derived class using a base class pointer object.
 - Deleting a derived class object using a pointer of base class type that has a non-virtual destructor results in undefined behavior.
-```C
+```Cpp
 class base {
   public:
     base()     
@@ -230,7 +230,7 @@ int main(){
 - Virtual Class is defined by writing a keyword “virtual” in the derived classes, allowing only one copy of data to be copied to Class B and Class C
 - To prevent the error and let the compiler work efficiently. It saves space and avoids ambiguity.
 - When a class is specified as a virtual base class, it prevents duplication of its data members. Only one copy of its data members is shared by all the base classes that use the virtual base class.
-```C
+```Cpp
 class A { 
 public: 
     int a; 
