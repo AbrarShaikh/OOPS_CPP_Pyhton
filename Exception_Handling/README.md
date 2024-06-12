@@ -5,7 +5,7 @@
 ```try``` - code that may raise an exception.\
 ```catch``` - code that handles the exception thrown by the throw keyword.\
 ```throw``` - throws an exception when an error is detected (Optional).
-```C
+```Cpp
 try {         
      // Code that might throw an exception
      throw SomeExceptionType("Error message");
@@ -15,7 +15,7 @@ catch( ExceptionName e1 )  {
  }
 ```
 example: throw in class
-```C
+```Cpp
 class AClass{ //a class
      public:
      class AnError //exception class{};
@@ -35,7 +35,7 @@ int main(){ //application
      return 0;}
 ```
 ### Multiple catch Statements
-```C
+```Cpp
     try {     
         // throw exception if array out of bounds
         if (index >= 4)
