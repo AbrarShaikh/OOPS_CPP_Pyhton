@@ -61,8 +61,7 @@ class Distance //English Distance class{
 
   Distance add_dist(const Distance&) const; //add };
 //--------------------------------------------------------------
-Distance Distance::add_dist(const Distance& d2) const
-{
+Distance Distance::add_dist(const Distance& d2) const{
 Distance temp; //temporary variable
  feet = 0; //ERROR: can’t modify this
  d2.feet = 0;} //ERROR: can’t modify member
