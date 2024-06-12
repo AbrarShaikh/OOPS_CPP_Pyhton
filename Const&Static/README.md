@@ -9,7 +9,7 @@
 - A static member function is independent of any object of the class. 
 - A static member function can be called using the class name even if no objects of the class exist.
 
-```C
+```Cpp
 class foo{
   private:
     static int count; //only one data item for all objects
@@ -33,7 +33,7 @@ int foo::count; //*definition* of count
 <type> function(args) const;
 ```
 example:
-```C
+```Cpp
 class aClass{
   private:
     int alpha;
@@ -49,7 +49,7 @@ class aClass{
 <type> function(const <type>args);
 ```
 example:
-```C
+```Cpp
 class Distance //English Distance class{
   private:
     int feet;
