@@ -70,9 +70,10 @@ class ClassB {
 - member function in the derived class shadows the member function in the base class.
 - redefinition of base class function in its derived class with the same signature
 - It is used to achieve Compile time as well as Runtime polymorphism.
+
 ### Compile time overriding
 - call to the overridden function is resolved during compile time.
-- It is also called early binding (static binding) where the function call is binded to its definition during compilation.
+- It is also called ```Early binding``` (```static binding```) where the function call is binded to its definition during compilation.
 ```C
 class Base {
    public:
@@ -96,7 +97,7 @@ class Derived : public Base {
     derived2.Base::print();
 ```
 ###  Runtime overriding using Virtual Function
-- function call will be binded to its definition during runtime (also known as late binding or dynamic binding).
+- function call will be binded to its definition during runtime (also known as ```late binding``` or ```dynamic binding```).
 - This can be done with the help of virtual functions.
 
 # Virtual Function 
@@ -136,7 +137,8 @@ int main() {
 ```
 # Abstract Class
 - class that contains a pure virtual function is known as an abstract class.
-- We cannot create objects of an abstract class.
+- Pure Virtual function is one with ```expression = 0```
+- We cannot create (instantiate) objects of an abstract class.
 - However, we can derive classes from them, and use their data members and member functions (except pure virtual functions).
 ```C
 // Abstract class
