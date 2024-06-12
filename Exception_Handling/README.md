@@ -34,6 +34,7 @@ int main(){ //application
           //tell user about error, etc.}
      return 0;}
 ```
+### Multiple catch Statements
 ```C
     try {     
         // throw exception if array out of bounds
