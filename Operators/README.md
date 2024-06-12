@@ -45,6 +45,8 @@ Complex c3 = c1 + c2; --> c1.operator+(c2);
 - The problem with this approach is, not all the time the first operand is an object of a user-defined type.
 - Friend functions can overload operators for user-defined types without altering the class declaration because they are not class members.
 - This is helpful when you need help editing the original class.
+- friend function is not a member of the class, it does not have a ```this``` pointer.
+- Therefore, an overloaded friend operator function is passed the operands explicitly.
 ```
 c2 = 1 + c1;
 ```
