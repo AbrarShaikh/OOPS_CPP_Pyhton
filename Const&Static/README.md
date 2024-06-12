@@ -6,7 +6,8 @@
 
 # Static Member Function
 - A static function can have access to only other static members (functions or variables) declared in the same class.
-- A static member function can be called using the class name (instead of its objects).
+- A static member function is independent of any object of the class. 
+- A static member function can be called using the class name even if no objects of the class exist.
 
 ```C
 class foo{
