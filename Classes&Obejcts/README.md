@@ -6,7 +6,7 @@
 ## Default constructor
 - A constructor which has no argument is known as default constructor.
 - It is invoked at the time of creating object.
-```C
+```Cpp
 class  Wall {
   private:
     double length;
@@ -21,7 +21,7 @@ class  Wall {
 };
 ```
 ### Defaulted Constructor
-``` C
+``` Cpp
 class  Wall {
   private:
     double length {5.5};
@@ -37,7 +37,7 @@ class  Wall {
 ```
 ## Parameterized Constructor
 - It is used to provide different values to distinct objects.
-```C
+```Cpp
 class Wall {
   private:
     double length;
@@ -66,7 +66,7 @@ Or
 , height(hgt)
 ```
 ## Constructor Overloading
-```C
+```Cpp
 class Room {
    private:
     double length;
@@ -101,7 +101,7 @@ Copy Constructor is called when:
 2. the object of the same class type is passed by value as an argument.
 3. the function returns the object of the same class type by value.
 ###  Implicit Copy Constructor
-``` C
+``` Cpp
 class Sample {
     int id;
  
@@ -111,7 +111,7 @@ public:
     void display() { cout << "ID=" << id; }
 };
 ```
-``` C
+``` Cpp
     Sample obj1(10);
     obj1.display(); 
     // creating an object of type Sample from the obj
@@ -119,7 +119,7 @@ public:
     obj2.display();
 ```
 ###  Explicit Copy Constructor
-``` C
+``` Cpp
 class Wall {
   private:
     double length;
@@ -145,7 +145,7 @@ class Wall {
     }
 };
 ```
-```C
+```Cpp
   // create an object of Wall class
   Wall wall1(10.5, 8.6);
   // copy contents of wall1 to wall2
@@ -169,7 +169,7 @@ Two types of copies are produced by the constructor:
 - A destructor is a special member function that is called automatically when an object goes out of scope or when we delete the object with the delete expression.
 - destructor has the same name as that of the class, and it does not have a return type.
 - ~ precedes the identifier to indicate destructor.
-``` C
+``` Cpp
 class Wall {
   private:
     double* length;
@@ -185,7 +185,7 @@ class Wall {
 ### Private Destructors
 - For dynamically created objects, it may happen that you pass a pointer to the object to a function and the function deletes the object.
 - If the object is referred after the function call, the reference will become dangling.
-```C
+```Cpp
 class Test {
 private:
     ~Test() {}
@@ -196,7 +196,7 @@ int main() { Test* t = new Test; }
 - but ```delet t``` program fails in the compilation When delete, destructor is called.\
 Can be resolved using
 1. function as a friend of the class
-```C
+```Cpp
 class Test {
 private:
     ~Test() {}
@@ -209,7 +209,7 @@ public:
 void destructTest(Test* ptr) { delete ptr; }
 ```
 2.  class instance method
-```C
+```Cpp
 class parent {
     // private destructor
     ~parent() { cout << "destructor called" << endl; }
