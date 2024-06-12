@@ -133,10 +133,15 @@ int main() {
     base1->print();
     return 0;}
 ```
+# Abstract Class
+- class that contains a pure virtual function is known as an abstract class.
+- We cannot create objects of an abstract class.
+- However, we can derive classes from them, and use their data members and member functions (except pure virtual functions).
+
 ## Pure Virtual Function
 - When the function has no definition, such function is known as "do-nothing" function, known as a pure virtual function.
 - implementation of all functions cannot be provided in a base class because of implementation is unknown. Such a class is called an abstract class.
-- class containing the pure virtual function cannot be used to declare the objects of its own, such classes are known as abstract base classes.
+- class containing the pure virtual function cannot be used to declare the objects of its own, such classes are known as ```abstract base classes```.
 - A pure virtual function or ```abstract function``` is a virtual function for which we can have an implementation, But we must override that function in the derived class.
 - A virtual function is not used for performing any task. It only serves as a placeholder.
 - The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
