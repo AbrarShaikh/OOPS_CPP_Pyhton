@@ -137,7 +137,35 @@ int main() {
 - class that contains a pure virtual function is known as an abstract class.
 - We cannot create objects of an abstract class.
 - However, we can derive classes from them, and use their data members and member functions (except pure virtual functions).
+```C
+// Abstract class
+class Shape {
+   protected:
+    float dimension;
 
+   public:
+    void getDimension() {
+        cin >> dimension;
+    }
+
+    // pure virtual Function
+    virtual float calculateArea() = 0;
+};
+// Derived class
+class Square : public Shape {
+   public:
+    float calculateArea() {
+        return dimension * dimension;
+    }
+};
+// Derived class
+class Circle : public Shape {
+   public:
+    float calculateArea() {
+        return 3.14 * dimension * dimension;
+    }
+};
+```
 ## Pure Virtual Function
 - When the function has no definition, such function is known as "do-nothing" function, known as a pure virtual function.
 - implementation of all functions cannot be provided in a base class because of implementation is unknown. Such a class is called an abstract class.
