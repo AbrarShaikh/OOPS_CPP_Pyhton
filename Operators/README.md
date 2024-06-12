@@ -43,6 +43,8 @@ Complex c3 = c1 + c2; --> c1.operator+(c2);
 
 ### Overload Operators Using Friend Function
 - The problem with this approach is, not all the time the first operand is an object of a user-defined type.
+- Friend functions can overload operators for user-defined types without altering the class declaration because they are not class members.
+- This is helpful when you need help editing the original class.
 ```
 c2 = 1 + c1;
 ```
