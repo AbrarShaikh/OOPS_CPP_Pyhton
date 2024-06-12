@@ -108,6 +108,7 @@ class Derived : public Base {
 - The prototypes of a virtual function of the base class and all the derived classes must be identical.
 - We cannot have a virtual constructor, but we can have a virtual destructor.
 - Virtual functions are useful when we store a group of objects.
+- ```Override``` specifier specifies the member functions of the derived classes that override the member function of the base class.
 Use : base class pointer can only access the base class members but not the members of the derived class.
 Although C++ permits the base pointer to point to any object derived from the base class, it cannot directly access the members of the derived class.
 ```C
@@ -167,11 +168,11 @@ class Circle : public Shape {
 };
 ```
 ## Pure Virtual Function
-- When the function has no definition, such function is known as "do-nothing" function, known as a pure virtual function.
+- When the function has no definition, such function is known as "do-nothing" function, also known as a pure virtual function.
 - implementation of all functions cannot be provided in a base class because of implementation is unknown. Such a class is called an abstract class.
+- A virtual function is not used for performing any task. It only serves as a placeholder.
 - class containing the pure virtual function cannot be used to declare the objects of its own, such classes are known as ```abstract base classes```.
 - A pure virtual function or ```abstract function``` is a virtual function for which we can have an implementation, But we must override that function in the derived class.
-- A virtual function is not used for performing any task. It only serves as a placeholder.
 - The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
 ```C
 class Base {
