@@ -236,7 +236,7 @@ public:
     int a; 
     A() // constructor 
         a = 10; }; 
-class B : public virtual A { };   
-class C : public virtual A { }; 
+class B : public virtual A { }; //shares copy of A  
+class C : public virtual A { }; //shares copy of A
 class D : public B, public C { }; 
 ```
