@@ -225,3 +225,18 @@ int main(){
   getchar();
   return 0;}
 ```
+# Virtual Base class
+- Virtual base classes are used in virtual inheritance in a way of preventing multiple “instances” (copy) of a given class appearing in an inheritance hierarchy when using multiple inheritances.
+- Virtual Class is defined by writing a keyword “virtual” in the derived classes, allowing only one copy of data to be copied to Class B and Class C
+- To prevent the error and let the compiler work efficiently. It saves space and avoids ambiguity.
+- When a class is specified as a virtual base class, it prevents duplication of its data members. Only one copy of its data members is shared by all the base classes that use the virtual base class.
+```C
+class A { 
+public: 
+    int a; 
+    A() // constructor 
+        a = 10; }; 
+class B : public virtual A { };   
+class C : public virtual A { }; 
+class D : public B, public C { }; 
+```
