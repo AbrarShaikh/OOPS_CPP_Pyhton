@@ -15,7 +15,7 @@ Ternary or conditional (?:)
 ```
 
 syntax
-```C
+```Cpp
 returnType operator symbol (arguments) {
     ... .. ...
 } 
@@ -25,7 +25,7 @@ returnType operator symbol (arguments) {
 - at least one of the operands must be a user-defined class object.
 - class member that defines the operator function must be one of the operands.
 - Any compatible type, including additional user-defined types, may be used for the other operand.
-``` C
+``` Cpp
 class Complex{
   …..
    public: 
@@ -50,7 +50,7 @@ Complex c3 = c1 + c2; --> c1.operator+(c2);
 ```
 c2 = 1 + c1;
 ```
-``` C
+``` Cpp
 class Complex {
     private:
         float real;
