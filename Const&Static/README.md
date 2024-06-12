@@ -26,7 +26,7 @@ int foo::count; //*definition* of count
 //--------------------------------------------------------------
 ```
 
-# const Member Functions
+# Const Member Functions
 - If a member function does not alter any data in the class, then we may declare it as a const member function
 ```C
 <type> function(args) const;
@@ -43,7 +43,7 @@ class aClass{
       { alpha = 99; } //ERROR: can’t modify a member
 };
 ```
-# const Member Functions Arguments
+# Const Member Functions Arguments
 ```C
 <type> function(const <type>args);
 ```
@@ -59,7 +59,7 @@ class Distance //English Distance class{
     Distance(int ft, float in) : feet(ft), inches(in)
       { }
 
-  Distance add_dist(const Distance&) const; //add };
+  Distance add_dist(const Distance&) const; //const Arg & const member };
 //--------------------------------------------------------------
 Distance Distance::add_dist(const Distance& d2) const{
 Distance temp; //temporary variable
