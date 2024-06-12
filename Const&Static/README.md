@@ -22,7 +22,7 @@ class foo{
     { cout<<"count is" << count; }
 };
 //--------------------------------------------------------------
-int foo::count = 0; //*definition* of count
+int foo::count; //*definition* of count
 //--------------------------------------------------------------
 ```
 
@@ -31,7 +31,18 @@ int foo::count = 0; //*definition* of count
 ```C
 <type> function(args) const;
 ```
-
+example:
+```C
+class aClass{
+  private:
+    int alpha;
+  public:
+    void nonFunc() //non-const member function
+      { alpha = 99; } //OK
+    void conFunc() const //const member function
+      { alpha = 99; } //ERROR: can’t modify a member
+};
+```
 # const Member Functions Arguments
 ```C
 <type> function(const <type>args);
